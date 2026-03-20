@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Issues ###
+.issue/
+
+### Environment Variables ###
+.env
+.amazonq

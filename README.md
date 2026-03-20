@@ -107,14 +107,100 @@ Paciente acompanha status da entrega
   <img src="https://i.imgur.com/O7HwCZt.gif" width="30"/> Roadmap
 </h1>
 
-* [ ] Cadastro de pacientes
-* [ ] Upload de receita
-* [ ] Validação de receita
-* [ ] Sistema de pedidos
-* [ ] Integração com farmácias
-* [ ] Sistema de entregas
+### ✅ Concluído
+
+#### Issue #001 - Estrutura Base (TDD)
+* [x] Configuração Spring Boot + Maven
+* [x] Arquitetura DDD completa
+* [x] Entidades: Paciente, Medico, Medicamento, Receita, Pedido, Entrega
+* [x] Value Objects: CPF, CRM, Endereco
+* [x] Enums: StatusPedido, StatusEntrega, TipoEntrega
+* [x] Testes: 14/14 passando
+* [x] Migration V1: Schema inicial
+
+#### Issue #002 - Docker
+* [x] Dockerfile multi-stage
+* [x] docker-compose.yml completo
+* [x] PostgreSQL 16 Alpine
+* [x] Healthcheck configurado
+* [x] Documentação DOCKER.md
+
+#### Issue #003 - Farmácia
+* [x] Value Object: CNPJ
+* [x] Entity: Farmacia
+* [x] Repository + JPA
+* [x] Use Cases: Criar, Consultar
+* [x] Controller: 4 endpoints REST
+* [x] Testes: 14/14 passando
+* [x] Migration V2: Tabela farmacia
+
+#### Issue #004 - Médico
+* [x] Entity: Medico (atualizado)
+* [x] Repository + JPA
+* [x] Use Cases: Criar, Consultar
+* [x] Controller: 4 endpoints REST
+* [x] Testes: 8/8 passando
+* [x] Migration V3: Campos de contato
+
+#### Issue #005 - Sistema de Receitas (Parcial)
+* [x] Value Object: ArquivoReceita
+* [x] Entity: Receita (atualizada)
+* [x] Service: ArmazenamentoReceitaService
+* [x] AWS S3: Configuração completa
+* [x] Upload de arquivos (PDF, JPG, PNG)
+* [x] Validação de tipo e tamanho
+* [x] Testes: 19/19 passando
+* [x] Migration V4: Campos adicionais
+* [x] Documentação AWS-S3.md
+
+### 🔄 Em Progresso
+
+#### Issue #005 - Sistema de Receitas (Continuação)
+* [ ] Controller: ReceitaController
+* [ ] Use Case: RegistrarReceitaUseCase
+* [ ] Use Case: ConsultarReceitaUseCase
+* [ ] Endpoints REST completos
+* [ ] Relacionamento receita-medicamento
+
+### 📋 Planejado
+
+#### Issue #006 - Sistema de Pedidos Completo
+* [ ] Validação de receita antes do pedido
+* [ ] Verificação de estoque
+* [ ] Relacionamento pedido-medicamento
+* [ ] Status de pedido
+* [ ] Endpoints REST
+
+#### Issue #007 - Sistema de Entregas
+* [ ] Criação de entrega
+* [ ] Atualização de status
+* [ ] Rastreamento
 * [ ] Integração com drones (opcional)
-* [ ] Dashboard administrativo
+
+#### Issue #008 - Autenticação e Segurança
+* [ ] Spring Security
+* [ ] JWT Authentication
+* [ ] Roles e Permissions
+* [ ] Endpoints protegidos
+
+#### Issue #009 - Dashboard Administrativo
+* [ ] Painel de controle
+* [ ] Relatórios
+* [ ] Métricas
+
+---
+
+```
+✅ Testes: 55/55 passando
+✅ Entidades: 7 implementadas
+✅ Value Objects: 4 implementados
+✅ Use Cases: 8 implementados
+✅ Controllers: 3 implementados
+✅ Endpoints: 11 funcionando
+✅ Migrations: 4 aplicadas
+✅ Cobertura: > 80%
+✅ AWS S3: Configurado
+```
 
 ---
 
